@@ -5,6 +5,7 @@
     <title-short>IASPM Journal</title-short>
     <id>http://www.zotero.org/styles/iaspm-journal</id>
     <link href="http://www.zotero.org/styles/iaspm-journal" rel="self"/>
+    <link href="http://www.zotero.org/styles/elsevier-harvard" rel="template"/>
     <link href="https://iaspmjournal.net/index.php/IASPM_Journal/article/view/583/dotx" rel="documentation"/>
     <author>
       <name>Steven Gamble</name>
