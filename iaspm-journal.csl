@@ -104,8 +104,7 @@
           <text variable="URL" prefix=" Available from: " suffix="."/>
           <date variable="accessed" prefix=" Accessed " form="text"/>
         </else-if>
-        <else-if type="broadcast" match="any">
-        </else-if>
+        <else-if type="broadcast" match="any"></else-if>
         <else>
           <text macro="author" suffix="."/>
           <text macro="issued-year" prefix=" " suffix="."/>
