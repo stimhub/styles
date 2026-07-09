@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="en-GB">
   <info>
-    <title>IASPM Journal Harvard style</title>
+    <title>IASPM Journal (author-date/Harvard)</title>
     <title-short>IASPM Journal</title-short>
     <id>http://www.zotero.org/styles/iaspm-journal</id>
     <link href="http://www.zotero.org/styles/iaspm-journal" rel="self"/>
@@ -21,6 +21,7 @@
       <term name="director" form="short"/>
     </terms>
   </locale>
+  </info>
   <macro name="author">
     <names variable="author">
       <name name-as-sort-order="all" sort-separator=", " initialize-with=". " delimiter=", " and="text" delimiter-precedes-last="always"/>
