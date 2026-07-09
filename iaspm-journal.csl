@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" default-locale="en-GB">
   <info>
-    <title>IASPM Journal (author-date/Harvard)</title>
+    <title>IASPM Journal (International Association for the Study of Popular Music)</title>
     <title-short>IASPM Journal</title-short>
     <id>http://www.zotero.org/styles/iaspm-journal</id>
     <link href="http://www.zotero.org/styles/iaspm-journal" rel="self"/>
@@ -19,7 +19,9 @@
   <locale xml:lang="en">
     <terms>
       <term name="interview">interview by</term>
-      <term name="director" form="short"/>
+      <term name="director" form="short">Dir.</term>
+      <term name="editor" form="short">Ed.</term>
+      <term name="online">online</term>
     </terms>
   </locale>
   <macro name="author">
@@ -61,11 +63,11 @@
       <key macro="issued-year"/>
     </sort>
     <layout prefix="(" suffix=")" delimiter="; ">
-      <group delimiter=" ">
-        <text macro="author-short"/>
-        <text macro="issued-year"/>
-      </group>
-      <group prefix=": ">
+      <group delimiter=": ">
+        <group delimiter=" ">
+          <text macro="author-short"/>
+          <text macro="issued-year"/>
+        </group>
         <text variable="locator"/>
       </group>
     </layout>
@@ -90,7 +92,8 @@
             <else>
               <text variable="title" font-style="italic" text-case="title" suffix="."/>
               <text macro="issued-year" prefix=" " suffix="."/>
-              <names variable="director" prefix=" Dir. " suffix=",">
+              <names variable="director" prefix=" " suffix=",">
+                <label form="short" suffix=" " text-case="capitalize-first"/>
                 <name initialize-with=". " and="text" delimiter=", "/>
               </names>
               <text variable="publisher" prefix=" "/>
@@ -171,8 +174,9 @@
               <text variable="title" text-case="title" prefix=" " suffix="."/>
               <group prefix=" " delimiter=" ">
                 <text term="in" text-case="capitalize-first"/>
-                <names variable="editor" suffix=" Ed.">
+                <names variable="editor">
                   <name name-as-sort-order="all" sort-separator=", " initialize="false" delimiter=", " and="text"/>
+                  <label form="short" prefix=" "/>
                 </names>
                 <text variable="container-title" font-style="italic" text-case="title" suffix="."/>
                 <group delimiter=": ">
@@ -209,7 +213,10 @@
                   <if variable="volume collection-title" match="any">
                     <text variable="container-title" font-style="italic" text-case="title" suffix=","/>
                     <group delimiter=", ">
-                      <text variable="volume" prefix="Volume "/>
+                      <group>
+                        <text term="volume" form="short" text-case="capitalize-first" suffix=" "/>
+                        <text variable="volume"/>
+                      </group>
                       <text variable="collection-title"/>
                     </group>
                   </if>
